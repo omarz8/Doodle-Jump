@@ -61,6 +61,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
                     platforms.shift()
 
                     console.log(platforms)
+
+                    let newPlatForm= new Platform(600)
+                    platforms.push(newPlatForm)
                 }
             })
         }
@@ -108,6 +111,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
         isGameOver= true
         clearInterval(upTimerId)
         clearInterval(downTimerId)
+        clearInterval(leftTimerId)
+        clearInterval(rightTimerId)
     }
 
     function control(e){
